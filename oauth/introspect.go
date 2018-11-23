@@ -82,7 +82,7 @@ func (s *Service) NewIntrospectResponseFromAccessToken(accessToken *models.Oauth
 	if accessToken.UserID.Valid {
 		user := new(models.OauthUser)
 		notFound := s.db.Select("username").Where("id = ?", accessToken.UserID.String).
-			First(user, accessToken.UserID.String).RecordNotFound()
+			First(user).RecordNotFound()
 		if notFound {
 			return nil, ErrUserNotFound
 		}
