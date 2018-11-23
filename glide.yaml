@@ -1,0 +1,35 @@
+package: github.com/spring2go/gravitee
+import:
+- package: github.com/RichardKnop/jsonhal
+- package: github.com/RichardKnop/go-fixtures
+- package: github.com/RichardKnop/logging
+- package: github.com/urfave/negroni
+- package: golang.org/x/crypto
+  repo: https://github.com/golang/crypto
+  vcs: git
+- package: github.com/unrolled/secure
+- package: github.com/jinzhu/gorm
+- package: google.golang.org/appengine
+  repo: https://github.com/golang/appengine
+  vcs: git
+  subpackages:
+  - cloudsql
+- package: github.com/RichardKnop/uuid
+- package: github.com/gorilla/sessions
+- package: github.com/gorilla/securecookie
+- package: github.com/gorilla/context
+- package: github.com/oxtoacart/bpool
+- package: github.com/jinzhu/configor
+- package: github.com/urfave/cli
+  version: v1.20.0
+- package: github.com/phyber/negroni-gzip
+  subpackages:
+  - gzip
+- package: gopkg.in/tylerb/graceful.v1
+  version: ~1.2.15
+testImport:
+- package: github.com/stretchr/testify
+  vcs: git
+  subpackages:
+  - assert
+- package: github.com/mattn/go-sqlite3
