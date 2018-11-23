@@ -1,0 +1,19 @@
+database:
+  type: mysql
+  host: localhost
+  port: 3306
+  user: root
+  password: root
+  databaseName: gravitee
+  maxIdleConns: 5
+  MaxOpenConns: 5
+oauth:
+  accessTokenLifetime: 3600 # default to 1 hour
+  refreshTokenLifetime: 1209600 # default to 14 days
+  authCodeLifetime: 3600 # default to 1 hour
+session:
+  secret: test_secret
+  path: /
+  maxAge: 604800
+  httpOnly: True
+isDevelopment: True
