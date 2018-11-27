@@ -4,16 +4,17 @@ database:
   port: 3306
   user: root
   password: root
-  databaseName: gravitee
-  maxIdleConns: 5
-  MaxOpenConns: 5
+  databasename: gravitee
+  maxidleconns: 5
+  Maxopenconns: 5
 oauth:
-  accessTokenLifetime: 3600 # default to 1 hour
-  refreshTokenLifetime: 1209600 # default to 14 days
-  authCodeLifetime: 3600 # default to 1 hour
+  accesstokenlifetime: 3600 # default to 1 hour
+  refreshtokenlifetime: 1209600 # default to 14 days
+  authcodelifetime: 3600 # default to 1 hour
 session:
   secret: test_secret
   path: /
-  maxAge: 604800
-  httpOnly: True
-isDevelopment: True
+  maxage: 604800
+  httponly: True
+serverport: 8080
+isdevelopment: True

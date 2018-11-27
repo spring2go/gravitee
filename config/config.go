@@ -38,5 +38,6 @@ type Config struct {
 	Database      DatabaseConfig
 	Oauth         OauthConfig
 	Session       SessionConfig
+	ServerPort    int  `default:"8080"`
 	IsDevelopment bool `default:"True"`
 }

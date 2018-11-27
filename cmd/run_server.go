@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"net/http"
+	"strconv"
 	"time"
 
 	"github.com/gorilla/mux"
@@ -37,6 +38,7 @@ func RunServer(configFile string) error {
 
 	// Add routes
 	services.HealthService.RegisterRoutes(router, "/v1")
+	services.UserService.RegisterRoutes(router, "/v1/user")
 	services.OauthService.RegisterRoutes(router, "/v1/oauth")
 	services.WebService.RegisterRoutes(router, "/web")
 
@@ -44,7 +46,7 @@ func RunServer(configFile string) error {
 	app.UseHandler(router)
 
 	// Run the server on port 8080, gracefully stop on SIGTERM signal
-	graceful.Run(":8080", 5*time.Second, app)
+	graceful.Run(":"+strconv.Itoa(cfg.ServerPort), 5*time.Second, app)
 
 	return nil
 }
