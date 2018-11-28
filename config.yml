@@ -6,7 +6,7 @@ database:
   password: root
   databasename: gravitee
   maxidleconns: 5
-  Maxopenconns: 5
+  maxopenconns: 5
 oauth:
   accesstokenlifetime: 3600 # default to 1 hour
   refreshtokenlifetime: 1209600 # default to 14 days

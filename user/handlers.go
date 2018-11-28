@@ -7,7 +7,7 @@ import (
 	"github.com/spring2go/gravitee/util/response"
 )
 
-// Handles health check requests (GET /v1/health)
+// Handles create user requests (GET /v1/health)
 func (s *Service) createUser(w http.ResponseWriter, r *http.Request) {
 
 	// Parse the form so r.Form becomes available
@@ -27,7 +27,7 @@ func (s *Service) createUser(w http.ResponseWriter, r *http.Request) {
 
 	// Check user existence
 	if s.oauthService.UserExists(username) {
-		response.Error(w, "email taken", http.StatusBadRequest)
+		response.Error(w, "username taken", http.StatusBadRequest)
 		return
 	}
 
