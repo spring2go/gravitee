@@ -156,7 +156,7 @@ func (s *Service) authorize(w http.ResponseWriter, r *http.Request) {
 
 		// Set query string params for the redirection URL
 		query.Set("access_token", accessToken.Token)
-		query.Set("expires_in", fmt.Sprintf("%d", s.cfg.Oauth.AccessTokenLifetime))
+		query.Set("expires_in", fmt.Sprintf("%d", lifetime))
 		query.Set("token_type", "Bearer")
 		query.Set("scope", scope)
 		// Add state param if present (recommended)
