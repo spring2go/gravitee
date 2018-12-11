@@ -1,4 +1,4 @@
-#Gravitee OAuth2简介
+# Gravitee OAuth2简介
 
 Go语言实现的轻量级OAuth2服务器，为极客时间课程《微服务架构和时间160讲》而开发。
 
@@ -19,7 +19,7 @@ Go语言实现的轻量级OAuth2服务器，为极客时间课程《微服务架
 4. 微服务多语言(polygolot)开发的趋势，目前很多互联网公司会同时采用若干种语言开发业务和系统服务，互为补充
 5. OAuth2本身实现和具体语言无关，理解了Golang版代码，不难用其它语言(如Java)实现
 
-##**注意！！！**
+## **注意！！！**
 
 1. 本项目代码仅为课程讲解开发，不是生产级！！！如需生产化，则还需要做很多生产扩展+严格的测试，具体见[项目扩展环节](#项目扩展环节)。同时，你若对本项目做了有价值生产扩展，欢迎提交pull requets。
 2. 本项目源码主要参考[RichardKnop的go-oauth2-server](https://github.com/RichardKnop/go-oauth2-server)，感谢原作者！本项目对原项目主要做了如下修改：
@@ -27,7 +27,7 @@ Go语言实现的轻量级OAuth2服务器，为极客时间课程《微服务架
 * 配置简化为使用本地配置文件
 * 依赖更新和使用[glide](https://github.com/Masterminds/glide)管理
 
-##安装启动起步
+## 安装启动起步
 
 ### 步骤一、下载源码并导入依赖
 
@@ -81,7 +81,7 @@ go build gravitee-server.go
 
 **注意**，服务器默认启动在8080端口，如需可在配置文件`config.yml`中修改，上述安装步骤可以同时参考[Gravitee Lab](https://github.com/spring2go/gravitee_lab)。
 
-##OAuth2用例实操
+## OAuth2用例实操
 
 下面以**授权码模式**为例展示如何使用Gravitee OAuth2服务(关于**授权码模式**的流程规范和请求参数的细节，请参考官方文档[OAuth2授权框架rfc6749的4.1节](https://tools.ietf.org/html/rfc6749#section-4.1))，假设Gravitee服务器已经启动，端口8080：
 
@@ -160,7 +160,7 @@ Gravitee的数据模型也不复杂，核心概念是：
 
 另外还有三个支持表，oauth_roles存储用户角色，oauth_scopes存储作用域相关信息，migrations表支持数据库升级。
 
-##源码简析
+## 源码简析
 
 Gravitee的源码不多也不复杂，一般的中高级研发人员不难看懂。我这边再把主要的目录结构梳理一下，方便大家阅读理解源码，见下表：
 
@@ -190,7 +190,7 @@ gravitee-server.go | 服务器程序主入口(main)，使用`cmd`目录内的命
 如果你对Golang还不太熟悉，可以参考[go by example](https://github.com/xg-wang/gobyexample)和[go cheat sheet](https://github.com/a8m/go-lang-cheat-sheet)快速上手。
 
 
-##项目扩展环节
+## 项目扩展环节
 
 **注意！！！**，本项目代码仅为课程讲解开发，不是生产级！！！如需生产化，则还需要做很多生产扩展+严格的测试，下面是一些可能的扩展点：
 
@@ -204,7 +204,7 @@ gravitee-server.go | 服务器程序主入口(main)，使用`cmd`目录内的命
 8. **其它语言实现**，如果企业暂不能引入golang技术栈，则Gravitee本身很简单，在理解其设计实现的基础上，用其它语言(比如Java)实现并不难。
 
 
-##参考
+## 参考
 
 《微服务架构实战160讲》
 
