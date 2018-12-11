@@ -9,9 +9,9 @@ Go语言实现的轻量级OAuth2服务器，为极客时间课程《微服务架
 * 课程缺乏项目架构设计和实战开发案例
 * 波波老师实践中是如何做架构设计的？
 
-基于学员的上述反馈和疑问，同时考虑到OAuth2是微服务架构的重要环节，我决定带领大家实现一个轻量级的OAuth2服务器(项目名Gravitee)，让大家深入理解OAuth2服务的原理和实现，同时解答大家的一些疑问。 
+基于学员的上述反馈和疑问，同时考虑到OAuth2是微服务架构的重要环节，我决定带领大家分析一个轻量级的OAuth2服务器(项目名Gravitee)的设计和实现，让大家深入理解OAuth2服务的原理和实现，同时解答大家的一些疑问。 
 
-我这边会使用Golang语言实现Gravitee，为啥使用Golang呢？原因如下：
+我这边Gravitee会使用Golang语言实现，为啥使用Golang呢？原因如下：
 
 1. Golang语言简单，语法简洁受控，适合课程讲解
 2. Golang由Google公司开发支持，背书强大，社区生态好
@@ -23,7 +23,7 @@ Go语言实现的轻量级OAuth2服务器，为极客时间课程《微服务架
 
 1. 本项目代码仅为课程讲解开发，不是生产级！！！如需生产化，则还需要做很多生产扩展+严格的测试，具体见[项目扩展环节](#项目扩展环节)。同时，你若对本项目做了有价值生产扩展，欢迎提交pull requets。
 2. 本项目源码主要参考[RichardKnop的go-oauth2-server](https://github.com/RichardKnop/go-oauth2-server)，感谢原作者！本项目对原项目主要做了如下修改：
-* 数据库从pregresql改为mysql
+* 数据库从Postgresql改为Mysql
 * 配置简化为使用本地配置文件
 * 依赖更新和使用[glide](https://github.com/Masterminds/glide)管理
 
