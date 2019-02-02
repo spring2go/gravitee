@@ -69,7 +69,7 @@ type OauthRefreshToken struct {
 	Client    *OauthClient
 	User      *OauthUser
 	Token     string    `sql:"type:varchar(40);unique;not null"`
-	ExpiresAt time.Time `sql:"not null"`
+	ExpiresAt time.Time `sql:"not null;DEFAULT:current_timestamp"`
 	Scope     string    `sql:"type:varchar(200);not null"`
 }
 
@@ -86,7 +86,7 @@ type OauthAccessToken struct {
 	Client    *OauthClient
 	User      *OauthUser
 	Token     string    `sql:"type:varchar(40);unique;not null"`
-	ExpiresAt time.Time `sql:"not null"`
+	ExpiresAt time.Time `sql:"not null;DEFAULT:current_timestamp"`
 	Scope     string    `sql:"type:varchar(200);not null"`
 }
 
@@ -104,7 +104,7 @@ type OauthAuthorizationCode struct {
 	User        *OauthUser
 	Code        string         `sql:"type:varchar(40);unique;not null"`
 	RedirectURI sql.NullString `sql:"type:varchar(200)"`
-	ExpiresAt   time.Time      `sql:"not null"`
+	ExpiresAt   time.Time      `sql:"not null;DEFAULT:current_timestamp"`
 	Scope       string         `sql:"type:varchar(200);not null"`
 }
 

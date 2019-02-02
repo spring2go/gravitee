@@ -16,3 +16,7 @@ vendor
 .vscode
 
 debug
+
+.DS_Store
+
+gravitee-server
